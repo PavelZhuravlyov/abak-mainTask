@@ -1,0 +1,474 @@
+<!DOCTYPE html>
+%html(lang="ru")
+  %head
+    %meta(charset="utf-8")
+    %title App
+    %link(rel="stylesheet" href="css/style.css")
+  %body
+    .container
+      .offers.js-grid
+        -# %div.item.grid-item
+        -#   .item-img
+        -#     %img(src="img/of1.jpg")
+        -#   .item-info
+        -#     %p.info-header
+        -#       Отпуск с семьёй на море
+        -#     %ul.info-descr
+        -#       %li Путешествия
+        -#       %li 12.06.12 - 14.06.12
+        -#       %li Тиват, Черногория
+        -#     %ul.info-comment
+        -#       %li 34 нравится
+        -#       %li 13 добавили себе 
+        -#   .item-author
+        -#     .foto
+        -#       %img(src="img/user1.jpg")
+        -#     .info
+        -#       %p.info-name 
+        -#         Евгений Пологов
+        -#       %p.info-offer
+        -#         предлагает
+        -#   %ul.item-comments
+        -#     %li
+        -#       .foto
+        -#         %img(src="img/user2.jpg")
+        -#       %p.text
+        -#         В Березовском можно в 3 раза дешевле взять
+        -#   .item-write-comment
+        -#     .foto
+        -#         %img(src="img/user2.jpg")
+        -#     %form(action="#" method="")
+        -#       %textarea.field(placeholder="Комментировать")
+
+        -#   .item-offer-btn
+        -#     %a.meet-offer(href="#") Ознакомиться с предложением
+        -#     %ul.offer-btns
+        -#       %li.item-btn
+        -#         %a.link-btn.lamp(href="#" data-btn="lamp")
+        -#       %li.item-btn
+        -#         %a.link-btn.like(href="#" data-btn="like")
+        -#       %li.item-btn
+        -#         %a.link-btn.add(href="#" data-btn="add")
+        -#       %li.item-btn
+        -#         %a.link-btn.comment(href="#" data-btn="comment")                 
+                
+        -# %div.item.grid-item
+        -#   .item-img
+        -#     %img(src="img/of2.jpg")
+        -#   .item-info
+        -#     %p.info-header
+        -#       Оформление интерьера
+        -#     %ul.info-descr
+        -#       %li Недвижимость
+        -#       %li Всегда актуально
+        -#       %li Москва
+        -#     %ul.info-comment
+        -#       %li 22 нравится
+        -#       %li 3 комментария
+        -#       %li 3 отзыва
+        -#       %li 5 добавили себе 
+        -#   .item-author
+        -#     .foto
+        -#       %img(src="img/user1.jpg")
+        -#     .info
+        -#       %p.info-name 
+        -#         Евгений Пологов
+        -#       %p.info-offer
+        -#         предлагает
+        -#   .item-offer-btn
+        -#     %a.meet-offer(href="#") Ознакомиться с предложением
+        -#     %ul.offer-btns
+        -#       %li.item-btn
+        -#         %a.link-btn.lamp(href="#" data-btn="lamp")
+        -#       %li.item-btn
+        -#         %a.link-btn.like(href="#" data-btn="like")
+        -#       %li.item-btn
+        -#         %a.link-btn.add(href="#" data-btn="add")
+        -#       %li.item-btn
+        -#         %a.link-btn.comment(href="#" data-btn="comment")
+
+        -# %div.item.grid-item
+        -#   .item-img
+        -#     %img(src="img/of3.jpg")
+        -#   .item-info
+        -#     %p.info-header
+        -#       iPad 4th generation
+        -#     %ul.info-descr
+        -#       %li Путешествия
+        -#       %li 12.06.12 - 14.06.12
+        -#       %li Екатеринбург
+        -#     %ul.info-comment
+        -#       %li 34 нравится
+        -#       %li 13 добавили себе 
+        -#   .item-author
+        -#     .foto
+        -#       %img(src="img/user1.jpg")
+        -#     .info
+        -#       %p.info-name 
+        -#         Евгений Пологов
+        -#       %p.info-offer
+        -#         предлагает
+
+
+        -# %div.item.grid-item
+        -#   .item-img
+        -#     %img(src="img/of4.jpg")
+        -#   .item-info
+        -#     %p.info-header
+        -#       Стильная кожанная сумка
+        -#     %ul.info-descr
+        -#       %li Одежда
+        -#       %li Всегда актуально
+        -#       %li Екатеринбург
+        -#     %ul.info-comment
+        -#       %li 4 нравится
+        -#       %li 6 добавили себе 
+        -#   .item-author
+        -#     .foto
+        -#       %img(src="img/user1.jpg")
+        -#     .info
+        -#       %p.info-name 
+        -#         Евгений Пологов
+        -#       %p.info-offer
+        -#         предлагает
+        
+        -# %div.item.grid-item
+        -#   .item-img
+        -#     %img(src="img/of6.jpg")
+        -#   .item-info
+        -#     %p.info-header
+        -#       Новый сайт-портфолио
+        -#     %ul.info-descr
+        -#       %li Путешествия
+        -#       %li 12.06.12 - 14.06.12
+        -#       %li Тиват, Черногория
+        -#     %ul.info-comment
+        -#       %li 4 нравится
+        -#       %li 6 добавили себе 
+        -#   .item-author
+        -#     .foto
+        -#       %img(src="img/user1.jpg")
+        -#     .info
+        -#       %p.info-name 
+        -#         Евгений Пологов
+        -#       %p.info-offer
+        -#         предлагает
+        
+        -# %div.item.grid-item
+        -#   .item-img
+        -#     %img(src="img/of7.jpg")
+        -#   .item-info
+        -#     %p.info-header
+        -#       Часы Bell and rose
+        -#     %ul.info-descr
+        -#       %li Путешествия
+        -#       %li 12.06.12 - 14.06.12
+        -#       %li Тиват, Черногория
+        -#     %ul.info-comment
+        -#       %li 34 нравится
+        -#       %li 13 добавили себе 
+        -#   .item-author
+        -#     .foto
+        -#       %img(src="img/user1.jpg")
+        -#     .info
+        -#       %p.info-name 
+        -#         Евгений Пологов
+        -#       %p.info-offer
+        -#         предлагает
+        
+        -# %div.item.grid-item
+        -#   .item-img
+        -#     %img(src="img/of8.jpg")
+        -#   .item-info
+        -#     %p.info-header
+        -#       Новая 3-х комнатная квартира
+        -#     %ul.info-descr
+        -#       %li Недвижимость
+        -#       %li Всегда актуально
+        -#       %li Москва
+        -#     %ul.info-comment
+        -#       %li 34 нравится
+        -#       %li 6 комментариев
+        -#       %li 3 отзыва
+        -#       %li 5 добавили себе 
+        -#   .item-author
+        -#     .foto
+        -#       %img(src="img/user1.jpg")
+        -#     .info
+        -#       %p.info-name 
+        -#         Евгений Пологов
+        -#       %p.info-offer
+        -#         предлагает
+        
+        -# %div.item.grid-item
+          -# .item-img
+          -#   %img(src="img/of5.jpg")
+          -# .item-info
+          -#   %p.info-header
+          -#     Корпоративные визитки
+          -#   %ul.info-descr
+          -#     %li Полиграфия
+          -#     %li 12.06.12 - 14.06.12
+          -#     %li Тиват, Черногория
+          -#   %ul.info-comment
+          -#     %li 4 нравится
+          -#     %li 8 добавили себе 
+          -# .item-author
+          -#   .foto
+          -#     %img(src="img/user1.jpg")
+          -#   .info
+          -#     %p.info-name 
+          -#       Евгений Пологов
+          -#     %p.info-offer
+          -#       предлагает
+          -#  %ul.item-comments
+          -#   %li
+          -#     .foto
+          -#       %img(src="img/user2.jpg")
+          -#     %p.text
+          -#       В Березовском можно в 3 раза дешевле взять
+          -# .item-write-comment
+          -#   .foto
+          -#       %img(src="img/user2.jpg")
+          -#   %form(action="#" method="")
+          -#     %textarea.field(placeholder="Комментировать")
+
+          -# .item-offer-btn
+          -#   %a.meet-offer(href="#") Ознакомиться с предложением
+          -#   %ul.offer-btns
+          -#     %li.item-btn
+          -#       %a.link-btn.lamp(href="#" data-btn="lamp")
+          -#     %li.item-btn
+          -#       %a.link-btn.like(href="#" data-btn="like")
+          -#     %li.item-btn
+          -#       %a.link-btn.add(href="#" data-btn="add")
+          -#     %li.item-btn
+          -#       %a.link-btn.comment(href="#" data-btn="comment") 
+    -# .offer-popup
+    -#   .offer-popup-header
+    -#     .foto-user
+    -#       %img(src="img/user1.jpg")
+    -#     .info
+    -#       %p.name Иван Стрельцов
+    -#       %p.status нуждается в этом
+    -#     %a.btn.active(href="#") Добавить в друзья
+    -#   .offer-popup-descr
+    -#     .descr
+    -#       .name-service Отпуск с семьей на море
+    -#       .category Отдых и путешествия
+    -#       .foto-service
+    -#         %img(src="img/preview-service.jpg")
+    -#         %a.status(href="#") Реализовано
+    -#       .text
+    -#         %p Разместиться можно по своему вкусу в Тивате, в  Которе, в Будве или в местности под названием Радовичи ( это что-то типа дерев... ...на побережье моря, с пляжем «Плави Горизонт», и с целой кучей туристических отелей)... 
+    -#         %p От Тивата и Котора на такси вам обойдется примерно в 10-15 евра до пляжа «Плави Горизонт». Так  же, там есть возможность взять машину на прокат  на время своего 
+    -#     %ul.descr-btns
+    -#       %li
+    -#         %a.btn(href="#") Добавить к себе
+    -#       %li
+    -#         %a.btn(href="#") Мне нравится
+    -#       %li
+    -#         %a.btn(href="#") Комментировать
+    -#   .offer-popup-comments
+    -#     %ul.comment
+    -#       %li
+    -#         .foto
+    -#           %img(src="img/user1.jpg")
+    -#         .text
+    -#           Отличное место!  Мы там не раз отдыхали семьями с детьми! Детишкам там отдыхать самое то!`
+    -#       %li
+    -#         .foto
+    -#           %img(src="img/user1.jpg")
+    -#         .text
+    -#           Прошедшим летом отдыхал в Черногории в Улцине в отеле zlataoliva отель расположен в очень живописном месте в соснах.
+    -#           В номере у нас было две комнаты одна большая с двухспальной кроватью, в другой комнате жили дети, в номере также у нас была кухня но мы ей даже не пользовались
+    -#           так как при отеле есть семейное кафе с очень вкусной кухней. Отдых на пляжах возможен как на галечных так и на песчаных. 
+    -#           Погода у нас была хорошая и теплое лазурное море. для любителей по изучать местные достопримечательности хозяева отеля проводят экскурсии по местным храмам, 
+    -#           пещерам, а также могут орг..
+    -#     .add-comment
+    -#       .foto
+    -#         %img(src="img/user2.jpg")
+    -#       %form.form(action="#" method="")
+    -#         %textarea.textspace(placeholder="Комментировать")
+    -#   .offer-popup-likes
+    -#     %ul.likes-list
+    -#       %li.item
+    -#         %p.header 8 добавили к себе
+    -#         %ul.users
+    -#           %li
+    -#             .foto
+    -#               %img(src="img/user1.jpg")
+    -#           %li
+    -#             .foto
+    -#               %img(src="img/user2.jpg")
+    -#       %li.item
+    -#         %p.header 5 нравится
+    -#         %ul.users
+    -#           %li
+    -#             .foto
+    -#               %img(src="img/user1.jpg")
+    -#           %li
+    -#             .foto
+    -#               %img(src="img/user2.jpg")
+    -#   %a.popup-close(href="#") Закрыть
+
+    .download-element
+      %span.download
+      %span.download-insert
+
+  %script(id="offer-popup" type="text/x-handlebars-template")
+
+    .offer-popup(data-id="{{id}}")
+      {{#with offer}}
+        .offer-popup-header
+          .foto-user
+            %img(src="{{authorFoto}}")
+          .info
+            %p.name {{author}}
+            %p.status нуждается в этом
+          %a.btn.active(href="#") Добавить в друзья
+      {{/with}}
+      {{#with offerPopup}}
+        .offer-popup-descr
+          .descr
+            .name-service {{../nameService}}
+            .category {{../categoryService}}
+            .foto-service
+              {{#with serviceImg}}
+                %img(src="{{address}}")
+                %a.status(href="#") Реализовано
+              {{/with}}
+            .text
+              {{{description}}}
+          %ul.descr-btns
+            %li
+              %a.btn(href="#") Добавить к себе
+            %li
+              %a.btn(href="#") Мне нравится
+            %li
+              %a.btn(href="#") Комментировать
+      {{/with}}
+      {{#with offer}}
+        .offer-popup-rewiews
+          %ul.rewiews
+            {{#each rewiews}}
+              {{#if show}}
+                %li
+                  .foto
+                    %img(src="{{fotoAuth}}")
+                  .text
+                    {{{text}}}
+              {{/if}}
+            {{/each}}
+          .add-rewiews
+            .foto
+              %img(src="img/user2.jpg")
+            %form.form(action="#" method="")
+              %textarea.textspace.js-write(placeholder="Комментировать" data-write="rewiew")
+        .offer-popup-likes
+          %ul.likes-list
+            %li.item
+              %p.header {{adding.length}} добавили к себе
+                %ul.users
+                  {{#each adding}}
+                    %li
+                      .foto
+                        %img(src="{{foto}}")
+                  {{/each}}
+            %li.item
+              %p.header {{likes.length}} нравится
+              %ul.users
+                %li
+                  {{#each likes}}
+                    %li
+                      .foto
+                        %img(src="{{foto}}")
+                  {{/each}}
+      %a.popup-close.js-popup-close(href="#") Закрыть
+      {{/with}}
+      
+  %script(id="offer" type="text/x-handlebars-template")
+    {{#with data}}  
+      {{#each this}}
+        {{#with offer}}
+          {{#if show}}
+            %div.item.js-grid-item(data-id="{{../id}}")
+              .item-img
+                %img(src="{{previewImg}}")
+              .item-info
+                %p.info-header
+                  {{nameService}}
+                %ul.info-descr
+                  %li {{categoryService}}
+                  %li {{deadline}}
+                  %li {{place}}
+                %ul.info-comment
+                  {{#if likes.length}}
+                    %li 
+                      {{likes.length}} нравится
+                  {{/if}} 
+
+                  {{#if adding.length}}
+                    %li 
+                      {{adding.length}} добавили себе
+                  {{/if}}
+
+                  {{#if commentsCount}}
+                    %li 
+                      {{commentsCount}} комментариев
+                  {{/if}}  
+
+                  {{#if rewiewsCount}}
+                    %li 
+                      {{rewiewsCount}} отзывов
+                  {{/if}} 
+              .item-author
+                .foto
+                  %img(src="{{authorFoto}}")
+                .info
+                  %p.info-name 
+                    {{author}}
+                  %p.info-offer
+                    предлагает
+              
+              .comments-block.js-comments(class="{{#if showComments}}active-comments{{/if}}")
+                %ul.item-comments
+                  {{#sortList comments 5}}
+                    {{#each this}}
+                      {{#if show}}
+                        %li.js-comment(data-id="{{id}}")
+                          .foto
+                            %img(src="{{foto}}")
+                          %p.text
+                            {{{text}}}
+                          %a.js-delete-comment.delete-offer(href="#")
+                      {{/if}}
+                    {{/each}}
+                  {{/sortList}}
+                .item-write-comment
+                  .foto
+                    %img(src="img/iam.jpg")
+                  %form(action="#" method="")
+                    %textarea.field.js-write(placeholder="Комментировать" data-write="comment")                
+
+              .item-offer-btn
+                %a.meet-offer.js-call-popup(href="#") Ознакомиться с предложением
+                %ul.offer-btns
+                  %li.item-btn
+                    %a.link-btn.delete.js-delete-offer(href="#" data-btn="delete")
+                  %li.item-btn
+                    %a.link-btn.like.js-add-prop(href="#" data-btn="likes" class="{{#if showLikes}} active-btn {{/if}}")
+                  %li.item-btn
+                    %a.link-btn.add.js-add-prop(href="#" data-btn="adding" class="{{#if showAdding}}active-btn{{/if}}")
+                  %li.item-btn
+                    %a.link-btn.comment.js-show-comments(href="#" data-btn="comment" class="{{#if showComments}}active-btn{{/if}}")
+          {{/if}}
+        {{/with}}
+      {{/each}}
+    {{/with}}
+
+  %script(src="js/main.js")              
+
+
+
+

@@ -1,0 +1,555 @@
+[
+  {
+    "id": 1,
+    "offer": {
+      "show": true,
+      "previewImg": "img/of1.jpg",
+      "nameService": "Отпуск с семьёй на море",
+      "categoryService": "Путешествия",
+      "deadline": "12.06.12 - 14.06.12",
+      "place": "Тиват, Черногория",
+      "likesCount": 34,
+      "addingCount": 5,
+      "rewiewsCount": 2,
+      "commentsCount": 5,
+      "author": "Евгений Пологов",
+      "authorFoto": "img/user1.jpg",
+      "showComments": false,
+      "comments": [
+        {
+          "id": 5,
+          "text": "text5",
+          "author": "Дарья Иванова",
+          "foto": "img/user2.jpg",
+          "date": 1465984155299,
+          "show": true
+        },
+        {
+          "id": 4,
+          "text": "text4",
+          "author": "Дарья Иванова",
+          "foto": "img/user2.jpg",
+          "date": 1465984155243,
+          "show": true
+        },
+        {
+          "id": 2,
+          "text": "text2",
+          "author": "Иван Сидоров",
+          "foto": "img/user1.jpg",
+          "date": 1465984155232,
+          "show": true
+        },
+        {
+          "id": 1,
+          "text": "text1",
+          "author": "Дарья Иванова",
+          "foto": "img/user2.jpg",
+          "date": 1465984155219,
+          "show": true
+        },
+        {
+          "id": 3,
+          "text": "text3",
+          "author": "Дарья Иванова",
+          "foto": "img/user2.jpg",
+          "date": 1465984155215,
+          "show": true
+        }
+      ]
+    },
+    "offerPopup": {
+      "status": "нуждается в этом",
+      "serviceImg": {
+        "implemented": false,
+        "address": "img/preview-service.jpg"
+      },
+      "description": "<p>Разместиться можно по своему вкусу в Тивате, в  Которе, в Будве или в местности под названием Радовичи ( это что-то типа дерев... ...на побережье моря, с пляжем «Плави Горизонт», и с целой кучей туристических отелей)... </p><p>От Тивата и Котора на такси вам обойдется примерно в 10-15 евра до пляжа «Плави Горизонт». Так  же, там есть возможность взять машину на прокат  на время своего</p>",
+      "rewiews": [
+        {
+          "author": "Иван Иванов",
+          "fotoAuth": "img/user2.jpg",
+          "text": "Отличное место!  Мы там не раз отдыхали семьями с детьми! Детишкам там отдыхать самое то!",
+          "show": true
+        },
+        {
+          "author": "Ann Smail",
+          "fotoAuth": "img/user3.jpg",
+          "text": "Прошедшим летом отдыхал в Черногории в Улцине в отеле zlataoliva отель расположен в очень живописном месте в соснах.В номере у нас было две комнаты одна большая с двухспальной кроватью, в другой комнате жили дети, в номере также у нас была кухня но мы ей даже не пользовались так как при отеле есть семейное кафе с очень вкусной кухней. Отдых на пляжах возможен как на галечных так и на песчаных. Погода у нас была хорошая и теплое лазурное море. для любителей по изучать местные достопримечательности хозяева отеля проводят экскурсии по местным храмам, пещерам, а также могут орг..",
+          "show": true
+        }
+      ],
+      "likeAuth": [
+        {
+          "author": "Иван Иванов",
+          "foto": "img/of3.jpg"
+        },
+        {
+          "author": "Сергей Сидоров",
+          "foto": "img/of3.jpg"
+        }
+      ],
+      "addAuth": [
+        {
+          "author": "Иван Иванов",
+          "foto": "img/of3.jpg"
+        },
+        {
+          "author": "Сергей Сидоров",
+          "foto": "img/of3.jpg"
+        }
+      ]
+    }
+  },
+  {
+    "id": 2,
+    "offer": {
+      "show": true,
+      "previewImg": "img/of2.jpg",
+      "nameService": "Оформление интерьера",
+      "categoryService": "Недвижимость",
+      "deadline": "Всегда актуально",
+      "place": "Москва",
+      "likesCount": 4,
+      "addingCount": 1,
+      "rewiewsCount": 4,
+      "commentsCount": 2,
+      "author": "Дарья Иванова",
+      "authorFoto": "img/user2.jpg",
+      "showComments": false,
+      "comments": [
+        {
+          "id": 2,
+          "text": "text2",
+          "author": "Иван Сидоров",
+          "foto": "img/user1.jpg",
+          "date": 1465984155239,
+          "show": true
+        },
+        {
+          "id": 1,
+          "text": "text",
+          "author": "Дарья Иванова",
+          "foto": "img/user2.jpg",
+          "date": 1465984155229,
+          "show": true
+        }
+      ]
+    },
+    "offerPopup": {
+      "status": "нуждается в этом",
+      "serviceImg": {
+        "implemented": false,
+        "address": "img/of3.jpg"
+      },
+      "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Temporibus explicabo nam doloremque! Itaque nulla iste in doloremque, mollitia quo sapiente adipisci, et culpa voluptates, placeat atque! Veniam magnam, suscipit animi?",
+      "rewiews": [
+        {
+          "author": "Иван Иванов",
+          "fotoAuth": "img/of3.jpg",
+          "text": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eaque, dolor, odio. Asperiores ad repellendus inventore ducimus sequi sunt delectus earum necessitatibus aliquam. Aperiam facilis dolores fugit alias, quia, praesentium cumque.",
+          "show": true
+        },
+        {
+          "author": "Ann Smail",
+          "fotoAuth": "img/of3.jpg",
+          "text": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eaque, dolor, odio. Asperiores ad repellendus inventore ducimus sequi sunt delectus earum necessitatibus aliquam. Aperiam facilis dolores fugit alias, quia, praesentium cumque.",
+          "show": true
+        }
+      ],
+      "likeAuth": [
+        {
+          "author": "Иван Иванов",
+          "foto": "img/of3.jpg"
+        },
+        {
+          "author": "Сергей Сидоров",
+          "foto": "img/of3.jpg"
+        }
+      ],
+      "addAuth": [
+        {
+          "author": "Иван Иванов",
+          "foto": "img/of3.jpg"
+        },
+        {
+          "author": "Сергей Сидоров",
+          "foto": "img/of3.jpg"
+        }
+      ]
+    }
+  },
+  {
+    "id": 3,
+    "offer": {
+      "show": true,
+      "previewImg": "img/of3.jpg",
+      "nameService": "iPad 4th generation",
+      "categoryService": "Товары",
+      "deadline": "12.06.12 - 14.06.12",
+      "place": "Москва",
+      "likesCount": 4,
+      "addingCount": 1,
+      "rewiewsCount": 3,
+      "commentsCount": 2,
+      "author": "Мария Королёва",
+      "authorFoto": "img/user2.jpg",
+      "showComments": false,
+      "comments": [
+        {
+          "id": 2,
+          "text": "text2",
+          "author": "Иван Сидоров",
+          "foto": "img/user1.jpg",
+          "date": 1465984155209,
+          "show": true
+        },
+        {
+          "id": 1,
+          "text": "text",
+          "author": "Дарья Иванова",
+          "foto": "img/user2.jpg",
+          "date": 1465984115239,
+          "show": true
+        }
+      ]
+    },
+    "offerPopup": {
+      "status": "нуждается в этом",
+      "serviceImg": {
+        "implemented": false,
+        "address": "img/of3.jpg"
+      },
+      "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Temporibus explicabo nam doloremque! Itaque nulla iste in doloremque, mollitia quo sapiente adipisci, et culpa voluptates, placeat atque! Veniam magnam, suscipit animi?",
+      "rewiews": [
+        {
+          "author": "Иван Иванов",
+          "fotoAuth": "img/of3.jpg",
+          "text": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eaque, dolor, odio. Asperiores ad repellendus inventore ducimus sequi sunt delectus earum necessitatibus aliquam. Aperiam facilis dolores fugit alias, quia, praesentium cumque.",
+          "show": true
+        },
+        {
+          "author": "Ann Smail",
+          "fotoAuth": "...",
+          "text": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eaque, dolor, odio. Asperiores ad repellendus inventore ducimus sequi sunt delectus earum necessitatibus aliquam. Aperiam facilis dolores fugit alias, quia, praesentium cumque.",
+          "show": true
+        }
+      ],
+      "likeAuth": [
+        {
+          "author": "Иван Иванов",
+          "foto": "..."
+        },
+        {
+          "author": "Сергей Сидоров",
+          "foto": "..."
+        }
+      ],
+      "addAuth": [
+        {
+          "author": "Иван Иванов",
+          "foto": "img/of3.jpg"
+        },
+        {
+          "author": "Сергей Сидоров",
+          "foto": "img/of3.jpg"
+        }
+      ]
+    }
+  },
+  {
+    "id": 4,
+    "offer": {
+      "show": true,
+      "previewImg": "img/of5.jpg",
+      "nameService": "Отпуск с семьёй на море",
+      "categoryService": "Путешествия",
+      "deadline": "12.06.12 - 14.06.12",
+      "place": "Тиват, Черногория",
+      "likesCount": 34,
+      "addingCount": 5,
+      "rewiewsCount": 2,
+      "commentsCount": 0,
+      "author": "Евгений Пологов",
+      "authorFoto": "img/of3.jpg",
+      "showComments": false,
+      "comments": []
+    },
+    "offerPopup": {
+      "status": "нуждается в этом",
+      "serviceImg": {
+        "implemented": false,
+        "address": "..."
+      },
+      "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Temporibus explicabo nam doloremque! Itaque nulla iste in doloremque, mollitia quo sapiente adipisci, et culpa voluptates, placeat atque! Veniam magnam, suscipit animi?",
+      "rewiews": [
+        {
+          "author": "Иван Иванов",
+          "fotoAuth": "img/of3.jpg",
+          "text": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eaque, dolor, odio. Asperiores ad repellendus inventore ducimus sequi sunt delectus earum necessitatibus aliquam. Aperiam facilis dolores fugit alias, quia, praesentium cumque.",
+          "show": true
+        },
+        {
+          "author": "Ann Smail",
+          "fotoAuth": "img/of3.jpg",
+          "text": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eaque, dolor, odio. Asperiores ad repellendus inventore ducimus sequi sunt delectus earum necessitatibus aliquam. Aperiam facilis dolores fugit alias, quia, praesentium cumque.",
+          "show": true
+        }
+      ],
+      "likeAuth": [
+        {
+          "author": "Иван Иванов",
+          "foto": "img/of3.jpg"
+        },
+        {
+          "author": "Сергей Сидоров",
+          "foto": "img/of3.jpg"
+        }
+      ],
+      "addAuth": [
+        {
+          "author": "Иван Иванов",
+          "foto": "img/of3.jpg"
+        },
+        {
+          "author": "Сергей Сидоров",
+          "foto": "img/of3.jpg"
+        }
+      ]
+    }
+  },
+  {
+    "id": 5,
+    "offer": {
+      "show": true,
+      "previewImg": "img/of5.jpg",
+      "nameService": "Отпуск с семьёй на море",
+      "categoryService": "Путешествия",
+      "deadline": "12.06.12 - 14.06.12",
+      "place": "Тиват, Черногория",
+      "likesCount": 34,
+      "addingCount": 5,
+      "rewiewsCount": 2,
+      "commentsCount": 2,
+      "author": "Евгений Пологов",
+      "authorFoto": "img/of3.jpg",
+      "showComments": false,
+      "comments": [
+        {
+          "id": 1,
+          "text": "text",
+          "author": "Дарья Иванова",
+          "foto": "img/user2.jpg",
+          "date": 1465984156239,
+          "show": true
+        },
+        {
+          "id": 2,
+          "text": "text2",
+          "author": "Иван Сидоров",
+          "foto": "img/user1.jpg",
+          "date": 1465984155240,
+          "show": true
+        }
+      ]
+    },
+    "offerPopup": {
+      "status": "нуждается в этом",
+      "serviceImg": {
+        "implemented": false,
+        "address": "..."
+      },
+      "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Temporibus explicabo nam doloremque! Itaque nulla iste in doloremque, mollitia quo sapiente adipisci, et culpa voluptates, placeat atque! Veniam magnam, suscipit animi?",
+      "rewiews": [
+        {
+          "author": "Иван Иванов",
+          "fotoAuth": "img/of3.jpg",
+          "text": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eaque, dolor, odio. Asperiores ad repellendus inventore ducimus sequi sunt delectus earum necessitatibus aliquam. Aperiam facilis dolores fugit alias, quia, praesentium cumque.",
+          "show": true
+        },
+        {
+          "author": "Ann Smail",
+          "fotoAuth": "img/of3.jpg",
+          "text": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eaque, dolor, odio. Asperiores ad repellendus inventore ducimus sequi sunt delectus earum necessitatibus aliquam. Aperiam facilis dolores fugit alias, quia, praesentium cumque.",
+          "show": true
+        }
+      ],
+      "likeAuth": [
+        {
+          "author": "Иван Иванов",
+          "foto": "img/of3.jpg"
+        },
+        {
+          "author": "Сергей Сидоров",
+          "foto": "img/of3.jpg"
+        }
+      ],
+      "addAuth": [
+        {
+          "author": "Иван Иванов",
+          "foto": "img/of3.jpg"
+        },
+        {
+          "author": "Сергей Сидоров",
+          "foto": "img/of3.jpg"
+        }
+      ]
+    }
+  },
+  {
+    "id": 6,
+    "offer": {
+      "show": true,
+      "previewImg": "img/of7.jpg",
+      "nameService": "Отпуск с семьёй на море",
+      "categoryService": "Путешествия",
+      "deadline": "12.06.12 - 14.06.12",
+      "place": "Тиват, Черногория",
+      "likesCount": 34,
+      "addingCount": 5,
+      "rewiewsCount": 2,
+      "commentsCount": 2,
+      "author": "Евгений Пологов",
+      "authorFoto": "img/of3.jpg",
+      "showComments": false,
+      "comments": [
+        {
+          "id": 1,
+          "text": "text",
+          "author": "Дарья Иванова",
+          "foto": "img/user2.jpg",
+          "date": 1465984155259,
+          "show": true
+        },
+        {
+          "id": 2,
+          "text": "text2",
+          "author": "Иван Сидоров",
+          "foto": "img/user1.jpg",
+          "date": 1465984155249,
+          "show": true
+        }
+      ]
+    },
+    "offerPopup": {
+      "status": "нуждается в этом",
+      "serviceImg": {
+        "implemented": false,
+        "address": "img/of3.jpg"
+      },
+      "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Temporibus explicabo nam doloremque! Itaque nulla iste in doloremque, mollitia quo sapiente adipisci, et culpa voluptates, placeat atque! Veniam magnam, suscipit animi?",
+      "rewiews": [
+        {
+          "author": "Иван Иванов",
+          "fotoAuth": "img/of3.jpg",
+          "text": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eaque, dolor, odio. Asperiores ad repellendus inventore ducimus sequi sunt delectus earum necessitatibus aliquam. Aperiam facilis dolores fugit alias, quia, praesentium cumque.",
+          "show": true
+        },
+        {
+          "author": "Ann Smail",
+          "fotoAuth": "img/of3.jpg",
+          "text": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eaque, dolor, odio. Asperiores ad repellendus inventore ducimus sequi sunt delectus earum necessitatibus aliquam. Aperiam facilis dolores fugit alias, quia, praesentium cumque.",
+          "show": true
+        }
+      ],
+      "likeAuth": [
+        {
+          "author": "Иван Иванов",
+          "foto": "img/of3.jpg"
+        },
+        {
+          "author": "Сергей Сидоров",
+          "foto": "img/of3.jpg"
+        }
+      ],
+      "addAuth": [
+        {
+          "author": "Иван Иванов",
+          "foto": "img/of3.jpg"
+        },
+        {
+          "author": "Сергей Сидоров",
+          "foto": "img/of3.jpg"
+        }
+      ]
+    }
+  },
+  {
+    "id": 7,
+    "offer": {
+      "show": true,
+      "previewImg": "img/of2.jpg",
+      "nameService": "Оформление интерьера",
+      "categoryService": "Недвижимость",
+      "deadline": "Всегда актуально",
+      "place": "Москва",
+      "likesCount": 4,
+      "addingCount": 1,
+      "rewiewsCount": 4,
+      "commentsCount": 2,
+      "author": "Дарья Иванова",
+      "authorFoto": "img/user2.jpg",
+      "showComments": false,
+      "comments": [
+        {
+          "id": 2,
+          "text": "text2",
+          "author": "Иван Сидоров",
+          "foto": "img/user1.jpg",
+          "date": 1465984155238,
+          "show": true
+        },
+        {
+          "id": 1,
+          "text": "text",
+          "author": "Дарья Иванова",
+          "foto": "img/user2.jpg",
+          "date": 1465984155219,
+          "show": true
+        }
+      ]
+    },
+    "offerPopup": {
+      "status": "нуждается в этом",
+      "serviceImg": {
+        "implemented": false,
+        "address": "img/of3.jpg"
+      },
+      "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Temporibus explicabo nam doloremque! Itaque nulla iste in doloremque, mollitia quo sapiente adipisci, et culpa voluptates, placeat atque! Veniam magnam, suscipit animi?",
+      "rewiews": [
+        {
+          "author": "Иван Иванов",
+          "fotoAuth": "img/of3.jpg",
+          "text": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eaque, dolor, odio. Asperiores ad repellendus inventore ducimus sequi sunt delectus earum necessitatibus aliquam. Aperiam facilis dolores fugit alias, quia, praesentium cumque.",
+          "show": true
+        },
+        {
+          "author": "Ann Smail",
+          "fotoAuth": "img/of3.jpg",
+          "text": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eaque, dolor, odio. Asperiores ad repellendus inventore ducimus sequi sunt delectus earum necessitatibus aliquam. Aperiam facilis dolores fugit alias, quia, praesentium cumque.",
+          "show": true
+        }
+      ],
+      "likeAuth": [
+        {
+          "author": "Иван Иванов",
+          "foto": "img/of3.jpg"
+        },
+        {
+          "author": "Сергей Сидоров",
+          "foto": "img/of3.jpg"
+        }
+      ],
+      "addAuth": [
+        {
+          "author": "Иван Иванов",
+          "foto": "img/of3.jpg"
+        },
+        {
+          "author": "Сергей Сидоров",
+          "foto": "img/of3.jpg"
+        }
+      ]
+    }
+  }
+]
