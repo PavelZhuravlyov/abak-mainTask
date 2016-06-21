@@ -317,82 +317,87 @@
       %span.download-insert
 
   %script(id="offer-popup" type="text/x-handlebars-template")
-
-    .offer-popup(data-id="{{id}}")
-      {{#with offer}}
-        .offer-popup-header
-          .foto-user
-            %img(src="{{authorFoto}}")
-          .info
-            %p.name {{author}}
-            %p.status нуждается в этом
-          %a.btn.active(href="#") Добавить в друзья
-      {{/with}}
-      {{#with offerPopup}}
-        .offer-popup-descr
-          .descr
-            .name-service {{../nameService}}
-            .category {{../categoryService}}
-            .foto-service
-              {{#with serviceImg}}
-                %img(src="{{address}}")
-                %a.status(href="#") Реализовано
+    {{#with activePopup}}
+      .offer-popup.js-action-class(data-id="{{id}}")
+        {{#with offer}}
+          .offer-popup-header
+            .foto-user
+              %img(src="{{authorFoto}}")
+            .info
+              %p.name {{author}}
+              %p.status нуждается в этом
+            %a.btn.active(href="#") Добавить в друзья
+          .offer-popup-descr
+            .descr
+              .name-service {{nameService}}
+              .category {{categoryService}}
+              {{#with ../offerPopup}}
+                .foto-service
+                  {{#with serviceImg}}
+                    %img(src="{{address}}")
+                    %a.status(href="#") Реализовано
+                  {{/with}}
+                .text
+                  {{{description}}}
               {{/with}}
-            .text
-              {{{description}}}
-          %ul.descr-btns
-            %li
-              %a.btn(href="#") Добавить к себе
-            %li
-              %a.btn(href="#") Мне нравится
-            %li
-              %a.btn(href="#") Комментировать
-      {{/with}}
-      {{#with offer}}
-        .offer-popup-rewiews
-          %ul.rewiews
-            {{#each rewiews}}
-              {{#if show}}
-                %li
-                  .foto
-                    %img(src="{{fotoAuth}}")
-                  .text
-                    {{{text}}}
-              {{/if}}
-            {{/each}}
-          .add-rewiews
-            .foto
-              %img(src="img/user2.jpg")
-            %form.form(action="#" method="")
-              %textarea.textspace.js-write(placeholder="Комментировать" data-write="rewiew")
-        .offer-popup-likes
-          %ul.likes-list
-            %li.item
-              %p.header {{adding.length}} добавили к себе
+            %ul.descr-btns
+              %li
+                %a.btn.js-add-prop.js-popup(href="#" data-btn="adding" class="{{#if showAdding}}active{{/if}}") Добавить к себе
+              %li
+                %a.btn.js-add-prop.js-popup(href="#" data-btn="likes" class="{{#if showLikes}}active{{/if}}") Мне нравится
+              %li
+                %a.btn.js-show-writes(href="#" data-btn="rewiews" class="{{#if showRewiews}}active{{/if}}") Добавить отзыв
+          .offer-popup-rewiews
+            .rewiews-block(class="{{#if showRewiews}}active-rewiews{{/if}}")
+              %ul.rewiews
+                {{#sortList rewiews 5}}
+                  {{#each this}}
+                    {{#if show}}
+                      %li.js-comment(data-id="{{id}}")
+                        .foto
+                          %img(src="{{foto}}")
+                        %p.text
+                          {{{text}}}
+                        %a.js-delete-write.delete-offer.js-popup(href="#" data-category="rewiews")
+                    {{/if}}
+                  {{/each}}
+                {{/sortList}}
+              .add-rewiews
+                .foto
+                  {{#with ../../currentUser}}
+                    %img(src="{{foto}}")
+                  {{/with}}
+                %form.form(action="#" method="")
+                  %textarea.textspace.js-write(placeholder="Комментировать" data-write="rewiews")
+          .offer-popup-likes
+            %ul.likes-list
+              %li.item
+                %p.header {{adding.length}} добавили к себе
+                  %ul.users
+                    {{#each adding}}
+                      %li
+                        .foto
+                          %img(src="{{foto}}")
+                    {{/each}}
+              %li.item
+                %p.header {{likes.length}} нравится
                 %ul.users
-                  {{#each adding}}
-                    %li
-                      .foto
-                        %img(src="{{foto}}")
-                  {{/each}}
-            %li.item
-              %p.header {{likes.length}} нравится
-              %ul.users
-                %li
-                  {{#each likes}}
-                    %li
-                      .foto
-                        %img(src="{{foto}}")
-                  {{/each}}
-      %a.popup-close.js-popup-close(href="#") Закрыть
-      {{/with}}
+                  %li
+                    {{#each likes}}
+                      %li
+                        .foto
+                          %img(src="{{foto}}")
+                    {{/each}}
+        %a.popup-close.js-popup-close(href="#") Закрыть
+        {{/with}}
+    {{/with}}
       
   %script(id="offer" type="text/x-handlebars-template")
     {{#with data}}  
       {{#each this}}
         {{#with offer}}
           {{#if show}}
-            %div.item.js-grid-item(data-id="{{../id}}")
+            %div.item.js-grid-item.js-action-class(data-id="{{../id}}")
               .item-img
                 %img(src="{{previewImg}}")
               .item-info
@@ -441,15 +446,17 @@
                             %img(src="{{foto}}")
                           %p.text
                             {{{text}}}
-                          %a.js-delete-comment.delete-offer(href="#")
+                          %a.js-delete-write.delete-offer(href="#" data-category="comments")
                       {{/if}}
                     {{/each}}
                   {{/sortList}}
                 .item-write-comment
                   .foto
-                    %img(src="img/iam.jpg")
-                  %form(action="#" method="")
-                    %textarea.field.js-write(placeholder="Комментировать" data-write="comment")                
+                    {{#with ../../../user}}
+                      %img.user-foto(src="{{foto}}")
+                    {{/with}}
+                  %form(action="#" method="post")
+                    %textarea.field.js-write(placeholder="Комментировать" data-write="comments")                
 
               .item-offer-btn
                 %a.meet-offer.js-call-popup(href="#") Ознакомиться с предложением
@@ -457,18 +464,14 @@
                   %li.item-btn
                     %a.link-btn.delete.js-delete-offer(href="#" data-btn="delete")
                   %li.item-btn
-                    %a.link-btn.like.js-add-prop(href="#" data-btn="likes" class="{{#if showLikes}} active-btn {{/if}}")
+                    %a.link-btn.like.js-add-prop(href="#" data-btn="likes" class="{{#if showLikes}}active{{/if}}")
                   %li.item-btn
-                    %a.link-btn.add.js-add-prop(href="#" data-btn="adding" class="{{#if showAdding}}active-btn{{/if}}")
+                    %a.link-btn.add.js-add-prop(href="#" data-btn="adding" class="{{#if showAdding}}active{{/if}}")
                   %li.item-btn
-                    %a.link-btn.comment.js-show-comments(href="#" data-btn="comment" class="{{#if showComments}}active-btn{{/if}}")
+                    %a.link-btn.comment.js-show-writes(href="#" data-btn="comments" class="{{#if showComments}}active{{/if}}")
           {{/if}}
         {{/with}}
       {{/each}}
     {{/with}}
 
-  %script(src="js/main.js")              
-
-
-
-
+  %script(src="js/main.js")  

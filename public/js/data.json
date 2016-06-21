@@ -8,13 +8,14 @@
       "categoryService": "Путешествия",
       "deadline": "12.06.12 - 14.06.12",
       "place": "Тиват, Черногория",
-      "rewiewsCount": 2,
+      "rewiewsCount": 3,
       "commentsCount": 5,
       "author": "Евгений Пологов",
       "authorFoto": "img/user1.jpg",
       "showComments": false,
+      "showRewiews": true,
       "showLikes": false,
-      "showAdding": true,
+      "showAdding": false,
       "comments": [
         {
           "id": 5,
@@ -73,15 +74,25 @@
       ],
       "rewiews": [
         {
+          "id": 1,
           "author": "Иван Иванов",
-          "fotoAuth": "img/user2.jpg",
+          "foto": "img/user2.jpg",
           "text": "Отличное место!  Мы там не раз отдыхали семьями с детьми! Детишкам там отдыхать самое то!",
           "show": true
         },
         {
+          "id": 2,
           "author": "Ann Smail",
-          "fotoAuth": "img/user3.jpg",
+          "foto": "img/user1.jpg",
           "text": "Прошедшим летом отдыхал в Черногории в Улцине в отеле zlataoliva отель расположен в очень живописном месте в соснах.В номере у нас было две комнаты одна большая с двухспальной кроватью, в другой комнате жили дети, в номере также у нас была кухня но мы ей даже не пользовались так как при отеле есть семейное кафе с очень вкусной кухней. Отдых на пляжах возможен как на галечных так и на песчаных. Погода у нас была хорошая и теплое лазурное море. для любителей по изучать местные достопримечательности хозяева отеля проводят экскурсии по местным храмам, пещерам, а также могут орг..",
+          "show": true
+        },
+        {
+          "author": "Паша Журавлёв",
+          "foto": "../img/iam.jpg",
+          "text": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloremque officia nulla officiis. Enim dolorum ducimus quaerat eveniet alias recusandae molestiae, est autem id nemo maxime, deserunt architecto illum labore obcaecati fuga beatae eum voluptatum officia quia possimus itaque placeat ullam odit. Qui ea autem quod dolorem voluptatum, ab inventore ",
+          "id": 3,
+          "date": 1466513509045,
           "show": true
         }
       ],
@@ -99,7 +110,7 @@
         {
           "author": "Сергей Сидоров",
           "foto": "img/of3.jpg",
-          "authorId": 10
+          "authorId": 9
         }
       ]
     },
@@ -116,19 +127,21 @@
     "id": 2,
     "offer": {
       "show": true,
-      "previewImg": "img/of2.jpg",
-      "nameService": "Оформление интерьера",
-      "categoryService": "Недвижимость",
-      "deadline": "Всегда актуально",
-      "place": "Москва",
+      "previewImg": "img/lambo.jpg",
+      "nameService": "Lamborghini Huracan",
+      "categoryService": "Авто",
+      "deadline": "Актуально",
+      "place": "Екатеринбург",
       "likesCount": 4,
-      "addingCount": 1,
-      "rewiewsCount": 4,
+      "addingCount": 3,
+      "rewiewsCount": 3,
       "commentsCount": 2,
       "author": "Дарья Иванова",
       "authorFoto": "img/user2.jpg",
       "showComments": false,
+      "showRewiews": true,
       "showLikes": false,
+      "showAdding": true,
       "comments": [
         {
           "id": 2,
@@ -141,16 +154,16 @@
         {
           "id": 1,
           "text": "text",
-          "author": "Дарья Иванова",
-          "foto": "img/user2.jpg",
+          "author": "Илья Соколов",
+          "foto": "img/user3.jpg",
           "date": 1465984155229,
           "show": true
         }
       ],
       "likes": [
         {
-          "author": "Иван Иванов",
-          "foto": "img/of3.jpg",
+          "author": "Илья Соколов",
+          "foto": "img/user3.jpg",
           "authorId": 2,
           "date": 1466165177345
         },
@@ -163,15 +176,25 @@
       ],
       "rewiews": [
         {
+          "id": 1,
           "author": "Иван Иванов",
-          "fotoAuth": "img/user2.jpg",
+          "foto": "img/user2.jpg",
           "text": "Отличное место!  Мы там не раз отдыхали семьями с детьми! Детишкам там отдыхать самое то!",
           "show": true
         },
         {
+          "id": 2,
           "author": "Ann Smail",
-          "fotoAuth": "img/user3.jpg",
+          "foto": "img/user1.jpg",
           "text": "Прошедшим летом отдыхал в Черногории в Улцине в отеле zlataoliva отель расположен в очень живописном месте в соснах.В номере у нас было две комнаты одна большая с двухспальной кроватью, в другой комнате жили дети, в номере также у нас была кухня но мы ей даже не пользовались так как при отеле есть семейное кафе с очень вкусной кухней. Отдых на пляжах возможен как на галечных так и на песчаных. Погода у нас была хорошая и теплое лазурное море. для любителей по изучать местные достопримечательности хозяева отеля проводят экскурсии по местным храмам, пещерам, а также могут орг..",
+          "show": true
+        },
+        {
+          "author": "Паша Журавлёв",
+          "foto": "../img/iam.jpg",
+          "text": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloremque officia nulla officiis. Enim dolorum ducimus quaerat eveniet alias recusandae molestiae, est autem id nemo maxime, deserunt architecto illum labore obcaecati fuga beatae eum voluptatum officia quia possimus itaque placeat ullam odit. Qui ea autem quod dolorem voluptatum, ab inventore ",
+          "id": 3,
+          "date": 1466513509045,
           "show": true
         }
       ],
@@ -191,8 +214,7 @@
           "author": "Паша Журавлёв",
           "foto": "../img/iam.jpg"
         }
-      ],
-      "showAdding": true
+      ]
     },
     "offerPopup": {
       "status": "нуждается в этом",
@@ -213,13 +235,15 @@
       "deadline": "12.06.12 - 14.06.12",
       "place": "Москва",
       "likesCount": 4,
-      "addingCount": 1,
+      "addingCount": 2,
       "rewiewsCount": 3,
       "commentsCount": 2,
       "author": "Мария Королёва",
       "authorFoto": "img/user2.jpg",
-      "showComments": false,
+      "showComments": true,
+      "showRewiews": true,
       "showLikes": false,
+      "showAdding": false,
       "comments": [
         {
           "id": 2,
@@ -254,15 +278,33 @@
       ],
       "rewiews": [
         {
+          "id": 1,
           "author": "Иван Иванов",
-          "fotoAuth": "img/user2.jpg",
+          "foto": "img/user2.jpg",
           "text": "Отличное место!  Мы там не раз отдыхали семьями с детьми! Детишкам там отдыхать самое то!",
+          "show": false
+        },
+        {
+          "id": 2,
+          "author": "Ann Smail",
+          "foto": "img/user1.jpg",
+          "text": "Прошедшим летом отдыхал в Черногории в Улцине в отеле zlataoliva отель расположен в очень живописном месте в соснах.В номере у нас было две комнаты одна большая с двухспальной кроватью, в другой комнате жили дети, в номере также у нас была кухня но мы ей даже не пользовались так как при отеле есть семейное кафе с очень вкусной кухней. Отдых на пляжах возможен как на галечных так и на песчаных. Погода у нас была хорошая и теплое лазурное море. для любителей по изучать местные достопримечательности хозяева отеля проводят экскурсии по местным храмам, пещерам, а также могут орг..",
           "show": true
         },
         {
-          "author": "Ann Smail",
-          "fotoAuth": "img/user3.jpg",
-          "text": "Прошедшим летом отдыхал в Черногории в Улцине в отеле zlataoliva отель расположен в очень живописном месте в соснах.В номере у нас было две комнаты одна большая с двухспальной кроватью, в другой комнате жили дети, в номере также у нас была кухня но мы ей даже не пользовались так как при отеле есть семейное кафе с очень вкусной кухней. Отдых на пляжах возможен как на галечных так и на песчаных. Погода у нас была хорошая и теплое лазурное море. для любителей по изучать местные достопримечательности хозяева отеля проводят экскурсии по местным храмам, пещерам, а также могут орг..",
+          "author": "Паша Журавлёв",
+          "foto": "../img/iam.jpg",
+          "text": "hfdgh sh;g hfdg hdf ghoihg",
+          "id": 4,
+          "date": 1466516880408,
+          "show": true
+        },
+        {
+          "author": "Паша Журавлёв",
+          "foto": "../img/iam.jpg",
+          "text": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloremque officia nulla officiis. Enim dolorum ducimus quaerat eveniet alias recusandae molestiae, est autem id nemo maxime, deserunt architecto illum labore obcaecati fuga beatae eum voluptatum officia quia possimus itaque placeat ullam odit. Qui ea autem quod dolorem voluptatum, ab inventore ",
+          "id": 3,
+          "date": 1466513509045,
           "show": true
         }
       ],
@@ -292,19 +334,21 @@
     "id": 4,
     "offer": {
       "show": true,
-      "previewImg": "img/of5.jpg",
+      "previewImg": "img/porsche.jpg",
       "nameService": "Отпуск с семьёй на море",
       "categoryService": "Путешествия",
       "deadline": "12.06.12 - 14.06.12",
       "place": "Тиват, Черногория",
       "likesCount": 34,
       "addingCount": 5,
-      "rewiewsCount": 2,
+      "rewiewsCount": 3,
       "commentsCount": 0,
       "author": "Евгений Пологов",
       "authorFoto": "img/of3.jpg",
       "showComments": false,
+      "showRewiews": false,
       "showLikes": false,
+      "showAdding": false,
       "comments": [],
       "likes": [
         {
@@ -322,15 +366,25 @@
       ],
       "rewiews": [
         {
+          "id": 1,
           "author": "Иван Иванов",
-          "fotoAuth": "img/user2.jpg",
+          "foto": "img/user2.jpg",
           "text": "Отличное место!  Мы там не раз отдыхали семьями с детьми! Детишкам там отдыхать самое то!",
           "show": true
         },
         {
+          "id": 2,
           "author": "Ann Smail",
-          "fotoAuth": "img/user3.jpg",
+          "foto": "img/user1.jpg",
           "text": "Прошедшим летом отдыхал в Черногории в Улцине в отеле zlataoliva отель расположен в очень живописном месте в соснах.В номере у нас было две комнаты одна большая с двухспальной кроватью, в другой комнате жили дети, в номере также у нас была кухня но мы ей даже не пользовались так как при отеле есть семейное кафе с очень вкусной кухней. Отдых на пляжах возможен как на галечных так и на песчаных. Погода у нас была хорошая и теплое лазурное море. для любителей по изучать местные достопримечательности хозяева отеля проводят экскурсии по местным храмам, пещерам, а также могут орг..",
+          "show": true
+        },
+        {
+          "author": "Паша Журавлёв",
+          "foto": "../img/iam.jpg",
+          "text": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloremque officia nulla officiis. Enim dolorum ducimus quaerat eveniet alias recusandae molestiae, est autem id nemo maxime, deserunt architecto illum labore obcaecati fuga beatae eum voluptatum officia quia possimus itaque placeat ullam odit. Qui ea autem quod dolorem voluptatum, ab inventore ",
+          "id": 3,
+          "date": 1466513509045,
           "show": true
         }
       ],
@@ -367,12 +421,14 @@
       "place": "Тиват, Черногория",
       "likesCount": 34,
       "addingCount": 5,
-      "rewiewsCount": 2,
+      "rewiewsCount": 3,
       "commentsCount": 2,
       "author": "Евгений Пологов",
       "authorFoto": "img/of3.jpg",
       "showComments": false,
+      "showRewiews": true,
       "showLikes": false,
+      "showAdding": false,
       "comments": [
         {
           "id": 1,
@@ -407,15 +463,25 @@
       ],
       "rewiews": [
         {
+          "id": 1,
           "author": "Иван Иванов",
-          "fotoAuth": "img/user2.jpg",
+          "foto": "img/user2.jpg",
           "text": "Отличное место!  Мы там не раз отдыхали семьями с детьми! Детишкам там отдыхать самое то!",
           "show": true
         },
         {
+          "id": 2,
           "author": "Ann Smail",
-          "fotoAuth": "img/user3.jpg",
+          "foto": "img/user1.jpg",
           "text": "Прошедшим летом отдыхал в Черногории в Улцине в отеле zlataoliva отель расположен в очень живописном месте в соснах.В номере у нас было две комнаты одна большая с двухспальной кроватью, в другой комнате жили дети, в номере также у нас была кухня но мы ей даже не пользовались так как при отеле есть семейное кафе с очень вкусной кухней. Отдых на пляжах возможен как на галечных так и на песчаных. Погода у нас была хорошая и теплое лазурное море. для любителей по изучать местные достопримечательности хозяева отеля проводят экскурсии по местным храмам, пещерам, а также могут орг..",
+          "show": true
+        },
+        {
+          "author": "Паша Журавлёв",
+          "foto": "../img/iam.jpg",
+          "text": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloremque officia nulla officiis. Enim dolorum ducimus quaerat eveniet alias recusandae molestiae, est autem id nemo maxime, deserunt architecto illum labore obcaecati fuga beatae eum voluptatum officia quia possimus itaque placeat ullam odit. Qui ea autem quod dolorem voluptatum, ab inventore ",
+          "id": 3,
+          "date": 1466513509045,
           "show": true
         }
       ],
@@ -451,13 +517,15 @@
       "deadline": "12.06.12 - 14.06.12",
       "place": "Тиват, Черногория",
       "likesCount": 34,
-      "addingCount": 5,
-      "rewiewsCount": 2,
+      "addingCount": 2,
+      "rewiewsCount": 3,
       "commentsCount": 2,
       "author": "Евгений Пологов",
       "authorFoto": "img/of3.jpg",
       "showComments": false,
+      "showRewiews": true,
       "showLikes": true,
+      "showAdding": false,
       "comments": [
         {
           "id": 1,
@@ -498,15 +566,25 @@
       ],
       "rewiews": [
         {
+          "id": 1,
           "author": "Иван Иванов",
-          "fotoAuth": "img/user2.jpg",
+          "foto": "img/user2.jpg",
           "text": "Отличное место!  Мы там не раз отдыхали семьями с детьми! Детишкам там отдыхать самое то!",
           "show": true
         },
         {
+          "id": 2,
           "author": "Ann Smail",
-          "fotoAuth": "img/user3.jpg",
+          "foto": "img/user1.jpg",
           "text": "Прошедшим летом отдыхал в Черногории в Улцине в отеле zlataoliva отель расположен в очень живописном месте в соснах.В номере у нас было две комнаты одна большая с двухспальной кроватью, в другой комнате жили дети, в номере также у нас была кухня но мы ей даже не пользовались так как при отеле есть семейное кафе с очень вкусной кухней. Отдых на пляжах возможен как на галечных так и на песчаных. Погода у нас была хорошая и теплое лазурное море. для любителей по изучать местные достопримечательности хозяева отеля проводят экскурсии по местным храмам, пещерам, а также могут орг..",
+          "show": true
+        },
+        {
+          "author": "Паша Журавлёв",
+          "foto": "../img/iam.jpg",
+          "text": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloremque officia nulla officiis. Enim dolorum ducimus quaerat eveniet alias recusandae molestiae, est autem id nemo maxime, deserunt architecto illum labore obcaecati fuga beatae eum voluptatum officia quia possimus itaque placeat ullam odit. Qui ea autem quod dolorem voluptatum, ab inventore ",
+          "id": 3,
+          "date": 1466513509045,
           "show": true
         }
       ],
@@ -542,13 +620,15 @@
       "deadline": "Всегда актуально",
       "place": "Москва",
       "likesCount": 4,
-      "addingCount": 1,
-      "rewiewsCount": 4,
+      "addingCount": 2,
+      "rewiewsCount": 3,
       "commentsCount": 2,
       "author": "Дарья Иванова",
       "authorFoto": "img/user2.jpg",
       "showComments": false,
+      "showRewiews": false,
       "showLikes": true,
+      "showAdding": false,
       "comments": [
         {
           "id": 2,
@@ -589,15 +669,25 @@
       ],
       "rewiews": [
         {
+          "id": 1,
           "author": "Иван Иванов",
-          "fotoAuth": "img/user2.jpg",
+          "foto": "img/user2.jpg",
           "text": "Отличное место!  Мы там не раз отдыхали семьями с детьми! Детишкам там отдыхать самое то!",
           "show": true
         },
         {
+          "id": 2,
           "author": "Ann Smail",
-          "fotoAuth": "img/user3.jpg",
+          "foto": "img/user1.jpg",
           "text": "Прошедшим летом отдыхал в Черногории в Улцине в отеле zlataoliva отель расположен в очень живописном месте в соснах.В номере у нас было две комнаты одна большая с двухспальной кроватью, в другой комнате жили дети, в номере также у нас была кухня но мы ей даже не пользовались так как при отеле есть семейное кафе с очень вкусной кухней. Отдых на пляжах возможен как на галечных так и на песчаных. Погода у нас была хорошая и теплое лазурное море. для любителей по изучать местные достопримечательности хозяева отеля проводят экскурсии по местным храмам, пещерам, а также могут орг..",
+          "show": true
+        },
+        {
+          "author": "Паша Журавлёв",
+          "foto": "../img/iam.jpg",
+          "text": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloremque officia nulla officiis. Enim dolorum ducimus quaerat eveniet alias recusandae molestiae, est autem id nemo maxime, deserunt architecto illum labore obcaecati fuga beatae eum voluptatum officia quia possimus itaque placeat ullam odit. Qui ea autem quod dolorem voluptatum, ab inventore ",
+          "id": 3,
+          "date": 1466513509045,
           "show": true
         }
       ],

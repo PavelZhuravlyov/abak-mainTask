@@ -1,6 +1,7 @@
 function User(options) {
   var 
     self = this,
+    _actionClass = '.js-action-class',
     _offers = new Offers($('.js-grid'));
 
   self.id = options.id;
@@ -16,8 +17,18 @@ function User(options) {
 
   this.listenHandler = function() {
     $(document).on('click', '.js-call-popup', function() {
-      _offers.renderPopUp(0);
+      var id = $(this).closest(_actionClass).data('id');
+      
+      _offers.renderPopUp(id);
       return false;
+    });
+
+    $(document).mouseup(function (e){ 
+      var div = $('.offer-popup'); 
+
+      if (div.target || div.has(e.target).length === 0) { 
+        _offers.removePopUp(); 
+      }
     });
 
     $(document).on('click', '.js-popup-close', function() {
@@ -31,54 +42,61 @@ function User(options) {
         text,
         $this, 
         dataWrite,
+        userOptions,
         maxLengthWrite;
 
       if (e.keyCode == 13) {
         $this = $(this);
-        id = $this.closest('.js-grid-item').data('id');
+        id = $this.closest(_actionClass).data('id');
         dataWrite = $this.data('write');
         text = $this.val();
-
-        if (dataWrite === 'rewiews') {
-          (text.length <= 500) ? _offers.addComment(id, text) : console.log(">");
-        }
-
-        _offers.addComment(id, {
-          'name': self.name,
+        userOptions = {
+          'author': self.name,
           'foto': self.foto,
           'text': text
-        });
+        }
+
+        if (dataWrite === 'rewiews') {
+          if (text.length >= 500) {
+            return false;
+            _offers.addWrite(id, userOptions, dataWrite);
+          }
+        }
+
+        _offers.addWrite(id, userOptions, dataWrite);
 
         return false;
       }
     });
 
     $(document).on('click', '.js-delete-offer', function() {
-      var id = $(this).closest('.js-grid-item').data('id');
+      var id = $(this).closest(_actionClass).data('id');
      
       _offers.deleteOffer(id);
      
       return false;
     });
 
-    $(document).on('click', '.js-delete-comment', function() {
+    $(document).on('click', '.js-delete-write', function() {
       var
         $this = $(this), 
-        idComment = $this.closest('li').data('id'),
-        idOffer = $this.closest('.js-grid-item').data('id');
+        category = $this.data('category'),
+        idWrite = $this.closest('li').data('id'),
+        idOffer = $this.closest(_actionClass).data('id');
 
-       _offers.deleteComment(idOffer, idComment);
+       _offers.deleteComment(idOffer, idWrite, category);
 
       return false;
     });
 
-    $(document).on('click', '.js-show-comments', function() {
+    $(document).on('click', '.js-show-writes', function() {
       var 
         $this = $(this),
-        idOffer = $this.closest('.js-grid-item').data('id');
+        category = $this.data('btn'),
+        idOffer = $this.closest(_actionClass).data('id');
 
-      $this.addClass('active-btn');
-      _offers.showComments(idOffer);
+      $this.addClass('active');
+      _offers.showWrites(idOffer, category);
 
       return false;
     });
@@ -86,15 +104,17 @@ function User(options) {
     $(document).on('click', '.js-add-prop', function() {
       var
         $this = $(this), 
-        idOffer = $this.closest('.js-grid-item').data('id'),
-        field = $this.data('btn');
+        thisPopup = ($this.hasClass('js-popup')) ? true : false,
+        idOffer = $this.closest(_actionClass).data('id'),
+        field = $this.data('btn'),
+        userOptions = {
+          'authorId': self.id,
+          'author': self.name,
+          'foto': self.foto,
+          'date': Date.now()
+        };
 
-      _offers.setValueField(idOffer, field, {
-        'authorId': self.id,
-        'author': self.name,
-        'foto': self.foto,
-        'date': Date.now()
-      });
+      _offers.setValueField(idOffer, field, userOptions, thisPopup);
 
       return false;
     });

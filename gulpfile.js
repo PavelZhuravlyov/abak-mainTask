@@ -45,16 +45,6 @@
             .pipe(gulp.dest('./public/js/'));
     });
 
-    // gulp.task('serve', function() {
-    //     browserSync.init({
-    //         server: {
-    //           baseDir: 'public'
-    //         }
-    //     });
-
-    //     browserSync.watch('public/**/*.*').on('change', browserSync.reload);
-    // });
-
     gulp.task('build', gulp.parallel('haml', 'sass', 'concatJS'));
 
     gulp.task('watch', function() {

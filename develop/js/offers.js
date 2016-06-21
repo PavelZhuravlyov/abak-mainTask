@@ -4,6 +4,7 @@ function Offers($container) {
     _template = Handlebars.compile($('#offer').html()),
     _tempPopUp = Handlebars.compile($('#offer-popup').html()),
     _offerSelector = '.js-grid-item',
+    _offerPopupSelector = '.offer-popup',
     _generalObj = {},
     _data,
     _masonry;
@@ -15,7 +16,7 @@ function Offers($container) {
       .then(function(data) {
         _generalObj.data = data;
         _generalObj.user = userOptions;
-
+        
         _reload(self.container, _template, _generalObj);
       });
   }
@@ -25,10 +26,17 @@ function Offers($container) {
   }
 
   this.renderPopUp = function(index) {
-    var $container = $('body');
+    var 
+      $container = $('body'),
+      popUpObj = {
+        'activePopup': _generalObj.data[index-1],
+        'currentUser': _generalObj.user
+      };
+
+    $(_offerPopupSelector).remove();
 
     $container.addClass('body-shadow');
-    $container.prepend(_tempPopUp(_generalObj.data[index]));
+    $container.prepend(_tempPopUp(popUpObj));
   }
 
   this.removePopUp = function() {
@@ -48,48 +56,67 @@ function Offers($container) {
     self.updateData(self.container, _template, _generalObj);
   } 
 
-  this.deleteComment = function(idObj, idComment) {
+  this.deleteComment = function(idObj, idWrite, category) {
     var
       offer = _findById(idObj, _generalObj.data).offer,
-      comments = offer.comments,
-      currentComment = _findById(idComment, comments);
+      elements = offer[category],
+      currentElement = _findById(idWrite, elements);
     
-    offer.commentsCount--;
-    offer.showComments = true;
-    currentComment.show = false;
+    if (category === "comments") {
+      offer.commentsCount--;
+      offer.showComments = true;
+    } else if (category === "rewiews") {
+      offer.rewiewsCount--;
+      offer.showRewiews = true;
+    }
 
-    self.updateData(self.container, _template, _generalObj);
+    currentElement.show = false;
+
+    self.updateData(self.container, _template, _generalObj); 
+
+    if (category === "rewiews") {
+      self.renderPopUp(idObj);
+    }
   }
 
-  this.showComments = function(id) {
-    var offer = _findById(id, _generalObj.data).offer;
-    
-    offer.showComments = true;
-
-    self.updateData($container, _template, _generalObj);
-  }
-
-  this.addComment = function(id, options) {
+  this.showWrites = function(id, category) {
     var 
       offer = _findById(id, _generalObj.data).offer,
-      comments = offer.comments,
-      commentField = {
-        'id': comments.length + 1,
-        'text': options.text,
-        'author': options.name,
-        'foto': options.foto,
-        'date': Date.now(),
-        'show': true
-      };
+      nameField = category.charAt(0).toUpperCase() + category.substr(1),
+      elementCategory = "show" + nameField;
+    
+    offer[elementCategory] = true;
 
-      comments.push(commentField);
-      offer.commentsCount++;
-      offer.showComments = true;
+    self.updateData($container, _template, _generalObj);
 
-      self.updateData(self.container, _template, _generalObj);
+    if (category === "rewiews") {
+      self.renderPopUp(id);
+    }
   }
 
-  this.setValueField = function(id, field, userOptions) {
+  this.addWrite = function(id, userOptions, dataWrite) {
+    var 
+      offer = _findById(id, _generalObj.data).offer,
+      elements = offer[dataWrite],
+      elementField = $.extend(userOptions, {
+        'id': elements.length + 1,
+        'date': Date.now(),
+        'show': true
+      });
+
+      elements.push(elementField);
+      elementsCount = dataWrite + 'Count';
+
+      offer[elementsCount]++;
+
+      self.updateData(self.container, _template, _generalObj);
+
+      if (dataWrite === "rewiews") {
+        self.renderPopUp(id);
+      }
+  }
+
+  this.setValueField = function(id, field, userOptions, thisPopup){
     var 
       offer = _findById(id, _generalObj.data).offer,    
       existingAuthors = _findByHash('authorId', offer[field]);
@@ -97,7 +124,12 @@ function Offers($container) {
     if (existingAuthors.indexOf(userOptions.authorId) == -1) {
       _generalObj.user = userOptions;
       offer[field].push(userOptions);
+
       self.updateData(self.container, _template, _generalObj);
+
+      if (thisPopup) {
+        self.renderPopUp(id);
+      }
     }
   }
 
@@ -114,16 +146,16 @@ function Offers($container) {
       existingAuthors = [],
       offers = data.data,
       dataLength = offers.length;
-    
+
     for (i = 0; i < dataLength; i++) {
       existingAuthors = _findByHash('authorId', offers[i].offer[field]);
       
       if (existingAuthors.indexOf(authorId) != -1) {
         offers[i].offer[offerField] = true;
+      } else {
+        offers[i].offer[offerField] = false;
       }
     }
-
-    console.log(offers);
   }
 
   function _findById(id, data) {
