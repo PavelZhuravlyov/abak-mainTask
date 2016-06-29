@@ -1,50 +1,27 @@
-function Offers($container) {
+function Offer($container) {
   var 
     self = this,
     _template = Handlebars.compile($('#offer').html()),
-    _tempPopUp = Handlebars.compile($('#offer-popup').html()),
     _offerSelector = '.js-grid-item',
-    _offerPopupSelector = '.js-popup',
     _generalObj = {};
 
   self.container = $container;
 
-  // Рендеринг popup оффера(на вход id оффера)
-  self.renderPopUp = function(id) {
-    var 
-      $container = $('.wrapper-popup'),
-      popUpObj = {
-        'activePopup': _findById(id, _generalObj.data),
-        'currentUser': _generalObj.user
-      };
-
-    $(_offerPopupSelector).remove();
-
-    $container.addClass('body-shadow');
-    $container.prepend(_tempPopUp(popUpObj));
-  };
-
-  // Удалить блок popup 
-  self.removePopUp = function() {
-    $('body').removeClass('body-shadow');
-    $(_offerPopupSelector).remove();
-  };
-
   // Логическое удаление оффера
-  self.deleteOffer = function(id) {
+  self.delete = function(id) {
     var thisOffer = _findById(id, _generalObj.data).offer;
     
-    thisOffer.show = false;
+    thisOffer.delete = true;
 
     _updateData(self.container, _template, _generalObj);
   }; 
 
   // Логическое удаление комментария/отзыва(определяется за счёт category) 
-  self.deleteWrite = function(idObj, idWrite, category) {
+  self.deleteWriting = function(idObj, idWriting, category) {
     var
       offer = _findById(idObj, _generalObj.data).offer,
       arrElements = offer[category],
-      currentElement = _findById(idWrite, arrElements);
+      currentElement = _findById(idWriting, arrElements);
     
     if (category === "comments") {
       offer.commentsCount--;
@@ -55,14 +32,10 @@ function Offers($container) {
     currentElement.show = false;
 
     _updateData(self.container, _template, _generalObj); 
-    
-    if (category === "rewiews") {
-      self.renderPopUp(idObj);
-    }
   };
 
   // Добавить комментарий/отзыв(определяется за счёт category) 
-  self.addWrite = function(id, userOptions, category) {
+  self.addWriting = function(id, userOptions, category) {
     var 
       offer = _findById(id, _generalObj.data).offer,
       arrElements = offer[category],
@@ -81,14 +54,10 @@ function Offers($container) {
       }
 
       _updateData(self.container, _template, _generalObj);
-
-      if (category === "rewiews") {
-        self.renderPopUp(id);
-      }
   };
 
   // Показать комментарий/отзыв(определяется за счёт category)
-  self.showWrites = function(id, category) {
+  self.showWritings = function(id, category) {
     var offer = _findById(id, _generalObj.data).offer;
     
     if (category === "comments") {
@@ -98,44 +67,45 @@ function Offers($container) {
     }
 
     _updateData($container, _template, _generalObj);
-
-    if (category === "rewiews") {
-      self.renderPopUp(id);
-    }
   };
 
   // Увеличение счётчика лайков/добавить к себе(определяется за счёт category)
-  self.incrementCounter = function(id, category, userOptions, thisPopup) {
+  self.incrementCounter = function(id, category) {
     var 
       offer = _findById(id, _generalObj.data).offer,    
-      existingAuthors = _findByHash('authorId', offer[category]);
+      existingAuthors = _findByHash('authorId', offer[category]),
+      userOptions = $.extend(_generalObj.user, { 'date': Date.now() });
 
     if (existingAuthors.indexOf(userOptions.authorId) === -1) {
-      _generalObj.user = userOptions;
       offer[category].push(userOptions);
-
-      _updateData(self.container, _template, _generalObj);
-
-      if (thisPopup) {
-        self.renderPopUp(id);
-      }
+    } else {
+      offer[category].pop(userOptions);
     }
+    _updateData(self.container, _template, _generalObj);
+  };
+
+  // Отправить данные для попапа
+  self.getPopupData = function(id) {
+    return {
+      'activePopup': _findById(id, _generalObj.data),
+      'currentUser': _generalObj.user
+    };
   };
 
   // Инициализация
   self.initOffers = function(userOptions) {
-    _getData(userOptions);
+    return _getData(userOptions);
   };
 
   // Получает данные с сервера и отображает контент
   function _getData(userOptions) {
-    _httpGetData('/data')
-      .then(function(data) {
-        _generalObj.data = data;
-        _generalObj.user = userOptions;
+    return _httpGetData('/data');
+      // .then(function(data) {
+      //   _generalObj.data = data;
+      //   _generalObj.user = userOptions;
         
-        _reload(self.container, _template, _generalObj);
-      });
+      //   _reload(self.container, _template, _generalObj);
+      // });
   }
 
   // Отправляет данные на сервер
@@ -164,7 +134,7 @@ function Offers($container) {
       
       for (i = 0; i < dataLength; i++) {
         existingAuthors = _findByHash('authorId', offers[i].offer[field]);
-        
+          
         if (existingAuthors.indexOf(authorId) != -1) {
           offers[i].offer[nameField] = true;
         } else {
@@ -191,37 +161,14 @@ function Offers($container) {
 
   // Возвращает массив значений, хэш которых соответствует hash 
   function _findByHash(hash, data) {
-    var 
-      arrHashes = [],
-      i,
-      dataLength = data.length;
-
-    for (i = 0; i < dataLength; i++) {
-      if (data[i][hash]) {
-        arrHashes.push(data[i][hash]);
-      }
-    }
-
-    return arrHashes;
-  }
-
-  // Перерисовывает контент
-  function _reload($container, template, data) {
-    $('.container').html($container);  
-    _checkAuthorField(data, ["likes", "adding"]);
-    $container.html(template(data));
-    _startMansory($container, _offerSelector);
-  }
-
-  // Запускает masonry
-  function _startMansory($container, itemSelector) {
-    $container.imagesLoaded(function() {
-      $container.masonry({
-        itemSelector: itemSelector,
-        columnWidth: 235
-      });
+    var arr = data.map(function(item) {
+      return item[hash];
     });
+
+    return arr;
   }
+
+
 
   // Получает данные(набор офферов) с сервера
   function _httpGetData(url) {

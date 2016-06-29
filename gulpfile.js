@@ -13,7 +13,7 @@
       browserSync = require('browser-sync').create();
     
     gulp.task('haml', function() {
-        return gulp.src('develop/assets/*.haml')
+        return gulp.src('develop/temp/*.haml')
               .pipe(haml().on('error', notify.onError({
                 title: "HAML"
               })))
@@ -52,7 +52,7 @@
             remember.forget('sass', path.resolve(filepath));
         });
 
-        gulp.watch('develop/assets/*.haml', gulp.series('haml'));
+        gulp.watch('develop/temp/*.haml', gulp.series('haml'));
         gulp.watch('develop/js/*.js', gulp.series('concatJS'));
     });
 

@@ -1,24 +1,32 @@
 ;(function() {
   var
-    _offers = new Offers($('.js-grid')), 
+    _offer = new Offer($('.js-grid')), 
+    _offerPopupSelector = '.js-popup',
+    _tempPopUp = Handlebars.compile($('#offer-popup').html()),
+    _actionClass = '.js-parent-element',
+    _offerSelector = '.js-grid-item',
+    _template = Handlebars.compile($('#offer').html()),
     _user = new User({
       id: 10,
       name: 'Паша Журавлёв',
       foto: '../img/iam.jpg'
     });
-    _actionClass = '.js-parent-element',
 
-  _offers.initOffers({
+  _offer.initOffers({
     'authorId': _user.id,
     'name': _user.name,
-    'foto': _user.foto,
-    'date': Date.now()
+    'foto': _user.foto
+  })
+  .then(function(data){
+    console.log(data);
   });
+
+  _startMansory($('.js-grid'), _offerSelector);
   
   $(document).on('click', '.js-call-popup', function() {
     var id = $(this).closest(_actionClass).data('id');
     
-    _offers.renderPopUp(id);
+    _renderPopUp(id);
 
     return false;
   });
@@ -27,27 +35,27 @@
     var popUp = $('.offer-popup'); 
 
     if (popUp.has(e.target).length === 0) { 
-      _offers.removePopUp(); 
+      _removePopUp(); 
     }
   });
 
   $(document).on('click', '.js-popup-close', function() {
-    _offers.removePopUp();
+    _removePopUp();
     return false;
   });
 
-  $(document).on('keydown', '.js-write', function(e) { 
+  $(document).on('keydown', '.js-writing', function(e) { 
     var 
       id,
       text,
       $this, 
-      dataWrite,
+      dataWriting,
       userOptions;
 
     if (e.keyCode == 13) {
       $this = $(this);
       id = $this.closest(_actionClass).data('id');
-      dataWrite = $this.data('write');
+      dataWriting = $this.data('writing');
       text = $this.val();
       userOptions = {
         'author': _user.name,
@@ -55,11 +63,15 @@
         'text': text
       };
 
-      if ( (dataWrite === 'rewiews') && (text.length >= 500) ) {
+      if ( (dataWriting === 'rewiews') && (text.length >= 500) ) {
         return false;
       }
 
-      _offers.addWrite(id, userOptions, dataWrite);
+      _offer.addWriting(id, userOptions, dataWriting);
+
+      if ($(_offerPopupSelector).length) {
+        _renderPopUp(id);
+      }
 
       return false;
     }
@@ -68,31 +80,39 @@
   $(document).on('click', '.js-delete-offer', function() {
     var id = $(this).closest(_actionClass).data('id');
    
-    _offers.deleteOffer(id);
+    _offer.delete(id);
    
     return false;
   });
 
-  $(document).on('click', '.js-delete-write', function() {
+  $(document).on('click', '.js-delete-writing', function() {
     var
       $this = $(this), 
       category = $this.data('category'),
-      idWrite = $this.closest('li').data('id'),
+      idWriting = $this.closest('li').data('id'),
       idOffer = $this.closest(_actionClass).data('id');
 
-     _offers.deleteWrite(idOffer, idWrite, category);
+    _offer.deleteWriting(idOffer, idWriting, category);
+
+    if ($(_offerPopupSelector).length) {
+      _renderPopUp(idOffer);
+    }
 
     return false;
   });
 
-  $(document).on('click', '.js-show-writes', function() {
+  $(document).on('click', '.js-show-writings', function() {
     var 
       $this = $(this),
       category = $this.data('category'),
       idOffer = $this.closest(_actionClass).data('id');
 
     $this.addClass('active');
-    _offers.showWrites(idOffer, category);
+    _offer.showWritings(idOffer, category);
+
+    if ($(_offerPopupSelector).length) {
+      _renderPopUp(idOffer);
+    }
 
     return false;
   });
@@ -100,20 +120,48 @@
   $(document).on('click', '.js-add-prop', function() {
     var
       $this = $(this), 
-      thisPopup = ($this.hasClass('js-popup')) ? true : false,
       idOffer = $this.closest(_actionClass).data('id'),
-      category = $this.data('category'),
-      userOptions = {
-        'authorId': _user.id,
-        'author': _user.name,
-        'foto': _user.foto,
-        'date': Date.now()
-      };
+      category = $this.data('category');
 
-    _offers.incrementCounter(idOffer, category, userOptions, thisPopup);
+    _offer.incrementCounter(idOffer, category);
+
+    if ($(_offerPopupSelector).length) {
+      _renderPopUp(idOffer);
+    }
+
+    _startMansory($('.js-grid'), _offerSelector);
+
 
     return false;
   });
+
+   // Рендеринг popup оффера(на вход id оффера)
+  function _renderPopUp(id) {
+    var 
+      $container = $('body'),
+      popUpObj = _offer.getPopupData(id);
+
+    $(_offerPopupSelector).remove();
+
+    $('body').addClass('body-shadow');
+    $container.prepend(_tempPopUp(popUpObj));
+  }
+
+  // Удалить блок popup 
+  function _removePopUp() {
+    $('body').removeClass('body-shadow');
+    $(_offerPopupSelector).remove();
+  }
+
+  // Запускает masonry
+  function _startMansory($container, itemSelector) {
+    $container.imagesLoaded(function() {
+      $container.masonry({
+        itemSelector: itemSelector,
+        columnWidth: 235
+      });
+    });
+  }
 
   // Сортировка данных по времени добавления
   // (на вход объект с данными и кол-во данных которое нужно вывести)
@@ -145,4 +193,14 @@
 
     return options.fn(result);
   });
+
+
+
+    // Перерисовывает контент
+  function _reload($container, template, data) {
+    $('.container').html($('.js-grid'));  
+    // _checkAuthorField(data, ["likes", "adding"]);
+    $container.html(template(data));
+    _startMansory($container, _offerSelector);
+  }
 })();

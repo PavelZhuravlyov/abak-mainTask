@@ -7,7 +7,6 @@
   %body
     .container
       .offers.js-grid
-    .wrapper-popup
 
   %script(id="offer-popup" type="text/x-handlebars-template")
     {{#with activePopup}}
@@ -39,7 +38,7 @@
               %li
                 %a.btn.js-add-prop.js-popup(href="#" data-category="likes" class="{{#if showLikes}}active{{/if}}") Мне нравится
               %li
-                %a.btn.js-show-writes(href="#" data-category="rewiews" class="{{#if showRewiews}}active{{/if}}") Добавить отзыв
+                %a.btn.js-show-writings(href="#" data-category="rewiews" class="{{#if showRewiews}}active{{/if}}") Добавить отзыв
           .offer-popup-rewiews
             .rewiews-block(class="{{#if showRewiews}}active-rewiews{{/if}}")
               %ul.rewiews
@@ -51,7 +50,7 @@
                           %img(src="{{foto}}")
                         %p.text
                           {{{text}}}
-                        %a.js-delete-write.delete-offer.js-popup(href="#" data-category="rewiews")
+                        %a.js-delete-writing.delete-offer.js-popup(href="#" data-category="rewiews")
                     {{/if}}
                   {{/each}}
                 {{/sortList}}
@@ -61,7 +60,7 @@
                     %img(src="{{foto}}")
                   {{/with}}
                 %form.form(action="#" method="")
-                  %textarea.textspace.js-write(placeholder="Комментировать" data-write="rewiews")
+                  %textarea.textspace.js-writing(placeholder="Комментировать" data-writing="rewiews")
           .offer-popup-likes
             %ul.likes-list
               %li.item
@@ -89,7 +88,7 @@
     {{#with data}}  
       {{#each this}}
         {{#with offer}}
-          {{#if show}}
+          {{#unless delete}}
             %div.item.js-grid-item.js-parent-element(data-id="{{../id}}")
               .item-img
                 %img(src="{{previewImg}}")
@@ -139,7 +138,7 @@
                             %img(src="{{foto}}")
                           %p.text
                             {{{text}}}
-                          %a.js-delete-write.delete-offer(href="#" data-category="comments")
+                          %a.js-delete-writing.delete-offer(href="#" data-category="comments")
                       {{/if}}
                     {{/each}}
                   {{/sortList}}
@@ -149,7 +148,7 @@
                       %img.user-foto(src="{{foto}}")
                     {{/with}}
                   %form(action="#" method="post")
-                    %textarea.field.js-write(placeholder="Комментировать" data-write="comments")                
+                    %textarea.field.js-writing(placeholder="Комментировать" data-writing="comments")                
 
               .item-offer-btn
                 %a.meet-offer.js-call-popup(href="#") Ознакомиться с предложением
@@ -161,8 +160,8 @@
                   %li.item-btn
                     %a.link-btn.add.js-add-prop(href="#" data-category="adding" class="{{#if showAdding}}active{{/if}}")
                   %li.item-btn
-                    %a.link-btn.comment.js-show-writes(href="#" data-category="comments" class="{{#if showComments}}active{{/if}}")
-          {{/if}}
+                    %a.link-btn.comment.js-show-writings(href="#" data-category="comments" class="{{#if showComments}}active{{/if}}")
+          {{/unless}}
         {{/with}}
       {{/each}}
     {{/with}}

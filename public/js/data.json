@@ -2,7 +2,7 @@
   {
     "id": 1,
     "offer": {
-      "show": true,
+      "delete": false,
       "previewImg": "img/of1.jpg",
       "nameService": "Отпуск с семьёй на море",
       "categoryService": "Путешествия",
@@ -14,7 +14,7 @@
       "authorFoto": "img/user1.jpg",
       "showComments": true,
       "showRewiews": true,
-      "showLikes": false,
+      "showLikes": true,
       "showAdding": false,
       "comments": [
         {
@@ -86,6 +86,12 @@
           "foto": "img/of3.jpg",
           "authorId": 3,
           "date": 1466165177315
+        },
+        {
+          "authorId": 10,
+          "name": "Паша Журавлёв",
+          "foto": "../img/iam.jpg",
+          "date": 1467194415372
         }
       ],
       "rewiews": [
@@ -142,7 +148,7 @@
   {
     "id": 2,
     "offer": {
-      "show": true,
+      "delete": false,
       "previewImg": "img/lambo.jpg",
       "nameService": "Lamborghini Huracan",
       "categoryService": "Авто",
@@ -244,7 +250,7 @@
   {
     "id": 3,
     "offer": {
-      "show": true,
+      "delete": false,
       "previewImg": "img/of3.jpg",
       "nameService": "iPad 4th generation",
       "categoryService": "Товары",
@@ -349,7 +355,7 @@
   {
     "id": 4,
     "offer": {
-      "show": true,
+      "delete": false,
       "previewImg": "img/porsche.jpg",
       "nameService": "Отпуск с семьёй на море",
       "categoryService": "Путешествия",
@@ -363,7 +369,7 @@
       "authorFoto": "img/of3.jpg",
       "showComments": false,
       "showRewiews": false,
-      "showLikes": false,
+      "showLikes": true,
       "showAdding": false,
       "comments": [],
       "likes": [
@@ -378,6 +384,12 @@
           "foto": "img/of3.jpg",
           "authorId": 3,
           "date": 1466165177315
+        },
+        {
+          "authorId": 10,
+          "name": "Паша Журавлёв",
+          "foto": "../img/iam.jpg",
+          "date": 1467194442020
         }
       ],
       "rewiews": [
@@ -429,7 +441,7 @@
   {
     "id": 5,
     "offer": {
-      "show": true,
+      "delete": false,
       "previewImg": "img/of5.jpg",
       "nameService": "Отпуск с семьёй на море",
       "categoryService": "Путешествия",
@@ -443,7 +455,7 @@
       "authorFoto": "img/of3.jpg",
       "showComments": false,
       "showRewiews": true,
-      "showLikes": false,
+      "showLikes": true,
       "showAdding": false,
       "comments": [
         {
@@ -475,6 +487,12 @@
           "foto": "img/of3.jpg",
           "authorId": 3,
           "date": 1466165177315
+        },
+        {
+          "authorId": 10,
+          "name": "Паша Журавлёв",
+          "foto": "../img/iam.jpg",
+          "date": 1467194442020
         }
       ],
       "rewiews": [
@@ -526,7 +544,7 @@
   {
     "id": 6,
     "offer": {
-      "show": true,
+      "delete": false,
       "previewImg": "img/of7.jpg",
       "nameService": "Отпуск с семьёй на море",
       "categoryService": "Путешествия",
@@ -540,7 +558,7 @@
       "authorFoto": "img/of3.jpg",
       "showComments": false,
       "showRewiews": true,
-      "showLikes": true,
+      "showLikes": false,
       "showAdding": false,
       "comments": [
         {
@@ -572,12 +590,6 @@
           "foto": "img/of3.jpg",
           "authorId": 3,
           "date": 1466165177315
-        },
-        {
-          "authorId": 10,
-          "author": "Паша Журавлёв",
-          "foto": "../img/iam.jpg",
-          "date": 1466165955454
         }
       ],
       "rewiews": [
@@ -629,7 +641,7 @@
   {
     "id": 7,
     "offer": {
-      "show": true,
+      "delete": false,
       "previewImg": "img/of2.jpg",
       "nameService": "Оформление интерьера",
       "categoryService": "Недвижимость",
@@ -643,7 +655,7 @@
       "authorFoto": "img/user2.jpg",
       "showComments": false,
       "showRewiews": false,
-      "showLikes": true,
+      "showLikes": false,
       "showAdding": false,
       "comments": [
         {
@@ -675,12 +687,6 @@
           "foto": "img/of3.jpg",
           "authorId": 3,
           "date": 1466165177315
-        },
-        {
-          "authorId": 10,
-          "author": "Паша Журавлёв",
-          "foto": "../img/iam.jpg",
-          "date": 1466165177325
         }
       ],
       "rewiews": [
