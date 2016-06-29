@@ -9,28 +9,20 @@
       "deadline": "12.06.12 - 14.06.12",
       "place": "Тиват, Черногория",
       "rewiewsCount": 3,
-      "commentsCount": 5,
+      "commentsCount": 6,
       "author": "Евгений Пологов",
       "authorFoto": "img/user1.jpg",
-      "showComments": false,
+      "showComments": true,
       "showRewiews": true,
       "showLikes": false,
       "showAdding": false,
       "comments": [
         {
-          "id": 5,
-          "text": "text5",
+          "id": 1,
+          "text": "text1",
           "author": "Дарья Иванова",
           "foto": "img/user2.jpg",
-          "date": 1465984155299,
-          "show": true
-        },
-        {
-          "id": 4,
-          "text": "text4",
-          "author": "Дарья Иванова",
-          "foto": "img/user2.jpg",
-          "date": 1465984155243,
+          "date": 1467178073921,
           "show": true
         },
         {
@@ -38,15 +30,7 @@
           "text": "text2",
           "author": "Иван Сидоров",
           "foto": "img/user1.jpg",
-          "date": 1465984155232,
-          "show": true
-        },
-        {
-          "id": 1,
-          "text": "text1",
-          "author": "Дарья Иванова",
-          "foto": "img/user2.jpg",
-          "date": 1465984155219,
+          "date": 1467178073922,
           "show": true
         },
         {
@@ -54,7 +38,39 @@
           "text": "text3",
           "author": "Дарья Иванова",
           "foto": "img/user2.jpg",
-          "date": 1465984155215,
+          "date": 1467178073923,
+          "show": true
+        },
+        {
+          "id": 4,
+          "text": "text4",
+          "author": "Дарья Иванова",
+          "foto": "img/user3.jpg",
+          "date": 1467178073924,
+          "show": true
+        },
+        {
+          "id": 5,
+          "text": "text5",
+          "author": "Дарья Иванова",
+          "foto": "img/user4.jpg",
+          "date": 1467178073925,
+          "show": true
+        },
+        {
+          "id": 6,
+          "text": "text6",
+          "author": "Дарья Иванова",
+          "foto": "img/user2.jpg",
+          "date": 1467178073926,
+          "show": true
+        },
+        {
+          "author": "Паша Журавлёв",
+          "foto": "../img/iam.jpg",
+          "text": "123",
+          "id": 7,
+          "date": 1467178073941,
           "show": true
         }
       ],
@@ -144,19 +160,19 @@
       "showAdding": true,
       "comments": [
         {
-          "id": 2,
-          "text": "text2",
-          "author": "Иван Сидоров",
-          "foto": "img/user1.jpg",
-          "date": 1465984155239,
-          "show": true
-        },
-        {
           "id": 1,
           "text": "text",
           "author": "Илья Соколов",
           "foto": "img/user3.jpg",
           "date": 1465984155229,
+          "show": true
+        },
+        {
+          "id": 2,
+          "text": "text2",
+          "author": "Иван Сидоров",
+          "foto": "img/user1.jpg",
+          "date": 1465984155239,
           "show": true
         }
       ],
@@ -246,19 +262,19 @@
       "showAdding": false,
       "comments": [
         {
-          "id": 2,
-          "text": "text2",
-          "author": "Иван Сидоров",
-          "foto": "img/user1.jpg",
-          "date": 1465984155209,
-          "show": true
-        },
-        {
           "id": 1,
           "text": "text",
           "author": "Дарья Иванова",
           "foto": "img/user2.jpg",
           "date": 1465984115239,
+          "show": true
+        },
+        {
+          "id": 2,
+          "text": "text2",
+          "author": "Иван Сидоров",
+          "foto": "img/user1.jpg",
+          "date": 1465984155209,
           "show": true
         }
       ],
@@ -431,19 +447,19 @@
       "showAdding": false,
       "comments": [
         {
-          "id": 1,
-          "text": "text",
-          "author": "Дарья Иванова",
-          "foto": "img/user2.jpg",
-          "date": 1465984156239,
-          "show": true
-        },
-        {
           "id": 2,
           "text": "text2",
           "author": "Иван Сидоров",
           "foto": "img/user1.jpg",
           "date": 1465984155240,
+          "show": true
+        },
+        {
+          "id": 1,
+          "text": "text",
+          "author": "Дарья Иванова",
+          "foto": "img/user2.jpg",
+          "date": 1465984156239,
           "show": true
         }
       ],
@@ -528,19 +544,19 @@
       "showAdding": false,
       "comments": [
         {
-          "id": 1,
-          "text": "text",
-          "author": "Дарья Иванова",
-          "foto": "img/user2.jpg",
-          "date": 1465984155259,
-          "show": true
-        },
-        {
           "id": 2,
           "text": "text2",
           "author": "Иван Сидоров",
           "foto": "img/user1.jpg",
           "date": 1465984155249,
+          "show": true
+        },
+        {
+          "id": 1,
+          "text": "text",
+          "author": "Дарья Иванова",
+          "foto": "img/user2.jpg",
+          "date": 1465984155259,
           "show": true
         }
       ],
@@ -631,19 +647,19 @@
       "showAdding": false,
       "comments": [
         {
-          "id": 2,
-          "text": "text2",
-          "author": "Иван Сидоров",
-          "foto": "img/user1.jpg",
-          "date": 1465984155238,
-          "show": true
-        },
-        {
           "id": 1,
           "text": "text",
           "author": "Дарья Иванова",
           "foto": "img/user2.jpg",
           "date": 1465984155219,
+          "show": true
+        },
+        {
+          "id": 2,
+          "text": "text2",
+          "author": "Иван Сидоров",
+          "foto": "img/user1.jpg",
+          "date": 1465984155238,
           "show": true
         }
       ],

@@ -1,7 +1,5 @@
 $btn-height: 24px;
 
-@import 'normalize.scss';
-
 @font-face { font-family: 'pfaXth'; src: url('fonts/pfaXth.ttf') format('truetype'), url('fonts/pfaXth.woff') format('woff'), url('fonts/pfaXth.eot?#iefix') format('embedded-opentype'); font-weight: normal; font-style: normal; }
 @font-face { font-family: 'pfaReg'; src: url('fonts/pfaReg.ttf') format('truetype'), url('fonts/pfaReg.woff') format('woff'), url('fonts/pfaReg.eot?#iefix') format('embedded-opentype'); font-weight: normal; font-style: normal; }
 
@@ -17,17 +15,8 @@ a { color: #000; text-decoration: none; }
 
 textarea { resize: none; }
 
-p { margin: 0; }
-
-.body-shadow::before {
-  content: '';
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background: rgba(0, 0, 0, .5);
-  z-index: 30;
+.body-shadow {
+  &::before { content: ''; position: fixed; top: 0; left: 0; right: 0; bottom: 0; background: rgba(0, 0, 0, .5); z-index: 30; }
 }
 
 .offers { 
