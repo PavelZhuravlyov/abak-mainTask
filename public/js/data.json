@@ -14,7 +14,7 @@
       "authorFoto": "img/user1.jpg",
       "showComments": true,
       "showRewiews": true,
-      "showLikes": true,
+      "showLikes": false,
       "showAdding": false,
       "comments": [
         {
@@ -86,12 +86,6 @@
           "foto": "img/of3.jpg",
           "authorId": 3,
           "date": 1466165177315
-        },
-        {
-          "authorId": 10,
-          "name": "Паша Журавлёв",
-          "foto": "../img/iam.jpg",
-          "date": 1467194415372
         }
       ],
       "rewiews": [
@@ -160,10 +154,10 @@
       "commentsCount": 2,
       "author": "Дарья Иванова",
       "authorFoto": "img/user2.jpg",
-      "showComments": false,
+      "showComments": true,
       "showRewiews": true,
       "showLikes": false,
-      "showAdding": true,
+      "showAdding": false,
       "comments": [
         {
           "id": 1,
@@ -230,11 +224,6 @@
           "author": "Сергей Сидоров",
           "foto": "img/of3.jpg",
           "authorId": 3
-        },
-        {
-          "authorId": 10,
-          "author": "Паша Журавлёв",
-          "foto": "../img/iam.jpg"
         }
       ]
     },
@@ -455,7 +444,7 @@
       "authorFoto": "img/of3.jpg",
       "showComments": false,
       "showRewiews": true,
-      "showLikes": true,
+      "showLikes": false,
       "showAdding": false,
       "comments": [
         {
@@ -487,12 +476,6 @@
           "foto": "img/of3.jpg",
           "authorId": 3,
           "date": 1466165177315
-        },
-        {
-          "authorId": 10,
-          "name": "Паша Журавлёв",
-          "foto": "../img/iam.jpg",
-          "date": 1467194442020
         }
       ],
       "rewiews": [
@@ -590,6 +573,12 @@
           "foto": "img/of3.jpg",
           "authorId": 3,
           "date": 1466165177315
+        },
+        {
+          "authorId": 10,
+          "name": "Паша Журавлёв",
+          "foto": "../img/iam.jpg",
+          "date": 1467270504942
         }
       ],
       "rewiews": [
